@@ -1,0 +1,55 @@
+.CardWithDescription {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.circleButton {
+    height: 33px;
+    width: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16.5px;
+    background-color: black;
+}
+
+.iconPlus {
+    height: 16.5px;
+    fill: white;
+    transition: all 0.3s ease 0s;
+    transform: rotate(0deg);
+}
+
+.iconPlus.isActive {
+    transform: rotate(45deg);
+}
+
+.descriptionBlock {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 350ms;
+    width: 90%;
+}
+
+.descriptionBlock.isActive {
+    opacity: 1;
+}
+
+.previewBlock {
+    max-height: 150px;
+}
+
+.hideText,
+.previewBlock {
+    opacity: 1;
+    transition: opacity 350ms;
+}
+
+.hideText.isActive,
+.previewBlock.isActive {
+    opacity: 0;
+}

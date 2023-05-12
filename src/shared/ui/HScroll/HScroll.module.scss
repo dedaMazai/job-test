@@ -1,0 +1,27 @@
+.HScroll {
+    position: absolute;
+    display: block;
+    align-items: end;
+    top: 0;
+    left: 0;
+    max-height: 750px; // max width, wider than which the scroll is triggered
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: rotate(-90deg) translateY(-250px);
+    transform-origin: right top;
+
+    & > * {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+}
+
+.HScroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.HScroll::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
