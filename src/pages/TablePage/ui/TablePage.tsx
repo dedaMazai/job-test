@@ -1,5 +1,5 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text, TextTheme } from '@/shared/ui/Text/Text';
 
 import cls from './TablePage.module.scss';
 
@@ -12,7 +12,7 @@ export const TablePage = (props: TablePageProps) => {
 
     return (
         <div className={classNames(cls.TablePage, {}, [className])}>
-            <Text text="Table" weight="bold" />
+            <Text text="Table" weight="bold" theme={TextTheme.ERROR} />
         </div>
     );
 };
