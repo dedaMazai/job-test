@@ -3,5 +3,5 @@
 @import './variables/global.scss';
 
 body {
-    background: #111;
+    background: var(--inverted-bg-color);
 }
