@@ -9,10 +9,12 @@
     overflow-x: hidden;
     transform: rotate(-90deg) translateY(-250px);
     transform-origin: right top;
+    scroll-snap-type: y mandatory;
 
     & > * {
         transform: rotate(90deg);
         margin: 10px 0;
+        scroll-snap-align: start;
     }
 }
 

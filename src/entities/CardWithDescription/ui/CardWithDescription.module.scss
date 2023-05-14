@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    overflow: hidden;
 }
 
 .circleButton {
@@ -30,26 +31,47 @@
 
 .descriptionBlock {
     position: absolute;
-    opacity: 0;
-    transition: opacity 350ms;
     width: 90%;
+    height: 70%;
+    overflow: auto;
+    transition: opacity 350ms;
+    opacity: 0;
+    z-index: 0;
 }
 
 .descriptionBlock.isActive {
     opacity: 1;
+    z-index: 10;
 }
 
 .previewBlock {
-    max-height: 150px;
+    height: 70%;
 }
 
 .hideText,
 .previewBlock {
     opacity: 1;
     transition: opacity 350ms;
+    z-index: 10;
 }
 
 .hideText.isActive,
 .previewBlock.isActive {
     opacity: 0;
+    z-index: 0;
+}
+
+.descriptionBlock::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.descriptionBlock::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+.descriptionBlock::-webkit-scrollbar-thumb {
+    background-color: var(--inverted-bg-color);
+    border-radius: 3px;
+    border: 1px solid var(--bg-color);
 }

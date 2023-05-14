@@ -3,18 +3,23 @@ import { Text } from '@/shared/ui/Text/Text';
 import { CardWithDescription } from '@/entities/CardWithDescription';
 import { HScroll } from '@/shared/ui/HScroll/HScroll';
 
-import './App.scss';
+import cls from './App.module.scss';
 
 const renderBlock = (
-    <VStack className="renderBlock" max justify="center" align="center">
+    <VStack className={cls.renderBlock} max justify="center" align="center">
         <Text text="Info header" weight="bold" />
-        <Text text="Info Info Info Info Info Info" />
+        <Text text="Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info InfoInfo Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info Info" />
+        {/* <img
+            className="img"
+            alt="preView"
+            src="https://static.tildacdn.com/tild3935-3662-4162-a431-306635613665/react.png"
+        /> */}
     </VStack>
 );
 
 const previewBlock1 = (
     <img
-        className="img"
+        className={cls.img}
         alt="preView"
         src="https://static.tildacdn.com/tild3935-3662-4162-a431-306635613665/react.png"
     />
@@ -22,7 +27,7 @@ const previewBlock1 = (
 
 const previewBlock2 = (
     <img
-        className="img"
+        className={cls.img}
         alt="preView"
         src="https://mobimg.b-cdn.net/v3/fetch/5c/5c667b51332990f7af3d3b20b4548883.jpeg?w=1470&r=0.5625"
     />
@@ -30,57 +35,62 @@ const previewBlock2 = (
 
 const CARDS = [
     {
-        img: previewBlock1,
+        preview: previewBlock1,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: '=1470&r=0.5625',
+        preview: previewBlock2,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: 'https://static.tildacdn.com/tild3935-3662-4162-a431-306635613665/react.png',
+        preview: previewBlock1,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: 'https://mobimg.b-cdn.net/v3/fetch/5c/5c667b51332990f7af3d3b20b4548883.jpeg?w=1470&r=0.5625',
+        preview: previewBlock2,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: 'https://static.tildacdn.com/tild3935-3662-4162-a431-306635613665/react.png',
+        preview: previewBlock1,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: 'https://mobimg.b-cdn.net/v3/fetch/5c/5c667b51332990f7af3d3b20b4548883.jpeg?w=1470&r=0.5625',
+        preview: previewBlock2,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: 'https://static.tildacdn.com/tild3935-3662-4162-a431-306635613665/react.png',
+        preview: previewBlock1,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: 'https://mobimg.b-cdn.net/v3/fetch/5c/5c667b51332990f7af3d3b20b4548883.jpeg?w=1470&r=0.5625',
+        preview: previewBlock2,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: 'https://static.tildacdn.com/tild3935-3662-4162-a431-306635613665/react.png',
+        preview: previewBlock1,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: 'https://mobimg.b-cdn.net/v3/fetch/5c/5c667b51332990f7af3d3b20b4548883.jpeg?w=1470&r=0.5625',
+        preview: previewBlock2,
         description: renderBlock,
         info: 'Open',
     },
     {
-        img: 'https://static.tildacdn.com/tild3935-3662-4162-a431-306635613665/react.png',
+        preview: previewBlock1,
+        description: renderBlock,
+        info: 'Open',
+    },
+    {
+        preview: previewBlock2,
         description: renderBlock,
         info: 'Open',
     },
@@ -88,13 +98,12 @@ const CARDS = [
 
 export function App() {
     return (
-        <div className="App">
-            <></>
-            <HScroll className='scroll'>
+        <div className={cls.App}>
+            <HScroll className={cls.scroll}>
                 {CARDS.map((card) => (
                     <CardWithDescription
                         descriptionBlock={card.description}
-                        preViewImg={card.img}
+                        previewBlock={card.preview}
                         textInfo={card.info}
                     />
                 ))}
