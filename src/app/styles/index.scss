@@ -1,6 +1,7 @@
 @import './normal.scss';
 @import './reset.scss';
 @import './variables/global.scss';
+@import 'handsontable/dist/handsontable.full.css';
 
 body {
     background: var(--inverted-bg-color);
