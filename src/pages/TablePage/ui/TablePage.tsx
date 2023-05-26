@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
-import { registerAllModules } from 'handsontable/registry';
-import { HotTable } from '@handsontable/react';
+import { registerAllModules } from 'hdtable/registry';
+import { HotTable } from 'hdtable-react';
 
 import cls from './TablePage.module.scss';
 import { useRemoveLicenseKey } from '@/shared/lib/hooks/removeLicenseKey/removeLicenseKey';
@@ -20,12 +20,11 @@ const hotData = [
     ['2024', 30, 15, 12, 13, 30, 15, 12, 13],
     ['2025', 30, 15, 12, 13, 30, 15, 12, 13],
     ['2026', 30, 15, 12, 13, 30, 15, 12, 13],
-    ['2027', 30, 15,],
 ];
 
 export const TablePage = (props: TablePageProps) => {
     const { className } = props;
-    useRemoveLicenseKey();
+    // useRemoveLicenseKey();
 
     return (
         <div className={classNames(cls.TablePage, {}, [className])}>
